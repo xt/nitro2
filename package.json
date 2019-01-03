@@ -1,0 +1,41 @@
+{
+  "name": "react-nitro-2",
+  "version": "0.0.1",
+  "description": "Microfrontend framework with React",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "install:apps": "lerna bootstrap",
+    "build:apps": "lerna run build",
+    "start-apps": "lerna run --parallel start",
+    "watch-apps": "lerna run --parallel watch",
+    "start:dev": "nodemon server"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.11.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.12.0",
+    "lerna": "^3.8.0",
+    "node-tailor": "^3.9.2",
+    "nodemon": "^1.18.9",
+    "webpack": "^4.28.2"
+  },
+  "dependencies": {
+    "config": "^3.0.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "entities": "^1.1.2",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "html-minifier": "^3.5.21",
+    "jsdom": "^13.1.0",
+    "react-dom": "^16.7.0",
+    "request-promise": "^4.2.2",
+    "require-from-string": "^2.0.2",
+    "requirejs": "^2.3.6"
+  }
+}

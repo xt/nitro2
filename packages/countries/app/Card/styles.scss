@@ -1,0 +1,19 @@
+.card {
+  display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  background: #eaeaea;
+}
+
+.card-details {
+  flex: 1;
+  border-radius: 3px;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
