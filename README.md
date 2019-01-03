@@ -6,4 +6,6 @@
 
 `npm run install:apps`
 
+`npm run build:apps`
+
 `npm run start:dev`
