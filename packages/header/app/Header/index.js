@@ -6,8 +6,11 @@ import { Query } from "react-apollo";
 
 import Logo from "../Logo";
 import NavItem from "../NavItem";
+import Notification from "../Notification";
 
 import "./styles.scss";
+
+import store from "../vendors/store";
 
 const GET_COUNTRIES = gql`
   query {
@@ -38,6 +41,7 @@ const Header = ({ active, setActive }) => (
                 linkName={item}
               />
             ))}
+            <Notification store={store}/>
           </div>
         </React.Fragment>
       );

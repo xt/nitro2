@@ -8,6 +8,9 @@ const Card = props => {
     <div className="card">
       <div className="card-details">
         <span>{country.name}</span>
+        <div className="like-icon">
+          <img src="images/thumbs-up-icon.svg"></img>
+        </div>
       </div>
     </div>
   );

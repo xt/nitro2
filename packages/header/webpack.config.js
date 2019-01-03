@@ -1,11 +1,13 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "../..", "dist/", PACKAGE.name),
-    filename: `${PACKAGE.name}.app.js`
+    filename: `${PACKAGE.name}.app.js`,
+    publicPath: `/${PACKAGE.name}`
   },
   module: {
     rules: [
@@ -18,6 +20,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "app/index.html"
-    })
+    }),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, "./app/", "images/"),
+      to: path.resolve(__dirname, "../..", "dist", PACKAGE.name, "images")
+    }]), 
   ]
 };
