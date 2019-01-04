@@ -10,7 +10,8 @@ import Notification from "../Notification";
 
 import "./styles.scss";
 
-import store from "../vendors/store";
+import store from "../store/store";
+import pubSub from "../../../vendors/pubsub/pub-sub";
 
 const GET_COUNTRIES = gql`
   query {
@@ -53,5 +54,9 @@ const Header = ({ active, setActive }) => (
 //   active: PropTypes.number.isRequired,
 //   setActive: PropTypes.func.isRequired
 // };
+
+let subscription = pubSub.subscribe('countryLiked', (country) => {
+  store.likedCountries.push(country);
+});
 
 export default Header;

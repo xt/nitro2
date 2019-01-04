@@ -1,4 +1,5 @@
 import React from "react";
+import LikeAction from "../LikeAction/index";
 
 import "./styles.scss";
 
@@ -8,9 +9,7 @@ const Card = props => {
     <div className="card">
       <div className="card-details">
         <span>{country.name}</span>
-        <div className="like-icon">
-          <img src="images/thumbs-up-icon.svg"></img>
-        </div>
+        <LikeAction />
       </div>
     </div>
   );
