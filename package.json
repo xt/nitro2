@@ -36,6 +36,7 @@
     "react-dom": "^16.7.0",
     "request-promise": "^4.2.2",
     "require-from-string": "^2.0.2",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "turbolinks": "^5.2.0"
   }
 }
