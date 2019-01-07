@@ -11,7 +11,7 @@ var React = require("react");
 
 var ReactDOMServer = require("react-dom/server");
 
-var Footer = require("./app/Footer/index");
+var Footer = require("./app/Footer/index").default;
 
 var express = require("express");
 
