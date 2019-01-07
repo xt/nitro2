@@ -1,6 +1,5 @@
 import React from "react";
 import store from "../store/store";
-import headerStore from "../../../header/app/store/store";
 import pubSub from "../../../vendors/pubsub/pub-sub";
 
 class LikeAction extends React.Component {
@@ -10,12 +9,11 @@ class LikeAction extends React.Component {
         this.emitLikeAction = this.emitLikeAction.bind(this);
     }
     emitLikeAction(event) {
-        let likedCountry = {
+        let likedItem = {
             name: "Alaska"
         };
-        store.currentLikedCountry = likedCountry;
-        pubSub.publish('countryLiked', likedCountry);
-        //headerStore.likedCountries.push(this.currentLikedCountry);
+        store.currentLikedItem = likedItem;
+        pubSub.publish('itemLiked', likedItem);
     }
     render() {
         return (

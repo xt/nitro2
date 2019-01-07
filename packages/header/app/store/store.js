@@ -2,19 +2,19 @@ import { decorate, observable, computed } from "mobx";
 
 class headerStore {
     constructor() {
-        this.likedCountries = [];
-        this.likedCountriesCount = 0;
+        this.likedItems = [];
+        this.likedItemsCount = 0;
     }
 
-    get getLikedCountriesCount() {
-        return this.likedCountries.length;
+    get getLikedItemsCount() {
+        return this.likedItems.length;
     }
 }
 
 decorate(headerStore, {
-    likedCountries: observable,
-    likedCountriesCount: observable,
-    getLikedCountriesCount: computed
+    likedItems: observable,
+    likedItemsCount: observable,
+    getLikedItemsCount: computed
 })
 
 window.headerStore = window.headerStore || new headerStore();

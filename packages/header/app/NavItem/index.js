@@ -5,7 +5,7 @@ import classnames from "classnames";
 import "./styles.scss";
 
 const NavItem = ({ index, active, linkName, onClick }) => (
-  <button
+  <a
     href={linkName}
     onClick={() => onClick(index)}
     className={classnames({
@@ -14,7 +14,7 @@ const NavItem = ({ index, active, linkName, onClick }) => (
     })}
   >
     {linkName}
-  </button>
+  </a>
 );
 
 NavItem.propTypes = {

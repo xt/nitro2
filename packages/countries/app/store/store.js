@@ -2,17 +2,17 @@ import { decorate, observable, computed } from "mobx";
 
 class countryStore {
     constructor() {
-        this.likedCountries = [];
-        this.currentLikedCountry = {};
+        this.likedItems = [];
+        this.currentLikedItem = {};
     }
 
     get updateHeaderStore() {
-        return this.currentLikedCountry;
+        return this.currentLikedItem;
     }
 }
 
 decorate(countryStore, {
-    likedCountries: observable,
+    likedItems: observable,
     updateHeaderStore: computed
 })
 

@@ -5,10 +5,12 @@
     <meta charset="utf-8" />
     <title>React Nitro 2</title>
     <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script src="/vendors/vendors.app.js"></script>
   </head>
 
   <body>
     <fragment src="http://localhost:3000/header/index.html"></fragment>
     <slot name="main"></slot>
+    <fragment src="http://localhost:3000/footer/index.html"></fragment>
   </body>
 </html>

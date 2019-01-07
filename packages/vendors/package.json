@@ -1,0 +1,25 @@
+{
+  "name": "vendors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

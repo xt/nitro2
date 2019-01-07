@@ -13,41 +13,24 @@ import "./styles.scss";
 import store from "../store/store";
 import pubSub from "../../../vendors/pubsub/pub-sub";
 
-const GET_COUNTRIES = gql`
-  query {
-    countries {
-      name
-      phone
-    }
-  }
-`;
 const items = ["about", "contact", "products"];
 const Header = ({ active, setActive }) => (
-  <Query query={GET_COUNTRIES}>
-    {({ loading, error, data }) => {
-      if (loading) return <div>Loading...</div>;
-      if (error) return <div>Error :</div>;
-
-      return (
-        <React.Fragment>
-          <div className="header">
-            <Logo />
-            total countries= {data.countries.length}
-            {items.map((item, index) => (
-              <NavItem
-                key={index}
-                index={index}
-                active={index === active}
-                onClick={setActive}
-                linkName={item}
-              />
-            ))}
-            <Notification store={store}/>
-          </div>
-        </React.Fragment>
-      );
-    }}
-  </Query>
+    <React.Fragment>
+      <div className="header">
+        <Logo />
+        {/* total countries= {data.countries.length} */}
+        {items.map((item, index) => (
+          <NavItem
+            key={index}
+            index={index}
+            active={index === active}
+            onClick={setActive}
+            linkName={item}
+          />
+        ))}
+        <Notification store={store}/>
+      </div>
+    </React.Fragment>
 );
 // Header.propTypes = {
 //   items: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -55,8 +38,8 @@ const Header = ({ active, setActive }) => (
 //   setActive: PropTypes.func.isRequired
 // };
 
-let subscription = pubSub.subscribe('countryLiked', (country) => {
-  store.likedCountries.push(country);
+let subscription = pubSub.subscribe('itemLiked', (country) => {
+  store.likedItems.push(country);
 });
 
 export default Header;
