@@ -8,18 +8,16 @@
     "start": "webpack-dev-server --open",
     "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel index.js -d functions",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "firebase:serve": "firebase serve"
+    "firebase:serve": "firebase serve",
+    "bf": "npm run babel && npm run firebase:serve"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "apollo-boost": "^0.1.23",
-    "graphql": "^14.0.2",
+    "exenv": "^1.2.2",
     "isomorphic-fetch": "^2.2.1",
-    "mobx": "^5.8.0",
     "react": "^16.7.0",
-    "react-apollo": "^2.3.3",
     "react-dom": "^16.7.0"
   },
   "devDependencies": {

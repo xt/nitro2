@@ -1,12 +1,13 @@
 const functions = require("firebase-functions");
 const React = require("react");
-const renderToString = require("react-dom/server");
-const ApolloApp = require("./app/index");
+const ReactDOMServer = require("react-dom/server");
+const Footer = require("./app/Footer/index");
 const express = require("express");
 
 const app = express();
 app.get("**", (req, res) => {
-  const html = renderToString(<ApolloApp />);
+  const html = ReactDOMServer.renderToString(<Footer />);
   res.set("Cache-Control", "public, max-age=600, s-max-age=1200");
+  res.send(html);
 });
-export let ssrapp = functions.https.onRequest(app);
+export let n2footer = functions.https.onRequest(app);
