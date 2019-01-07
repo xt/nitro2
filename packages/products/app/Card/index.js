@@ -26,7 +26,7 @@ const Card = props => {
     <div css={cardStyle}>
       <h3 css={nameStyle}>{product.productName}</h3>
       <img src={product.picUrl} />
-      <div>Rs {product.proce}</div>
+      <div>Rs {product.price}</div>
       {/* <LikeAction /> */}
     </div>
   );
