@@ -35,16 +35,14 @@ const mockResponse = {
       description: "Slim Plaid Luxury 100% Italian Wool Suit",
       price: "34.99",
       picUrl:
-        "https://images.express.com/is/image/expressfashion/0039_03252052_0432_6_fb?cache=on&wid=361&fmt=jpeg&qlt=74,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
+        "https://images.express.com/is/image/expressfashion/0039_03272124_0851_1_fb?cache=on&wid=361&fmt=jpeg&qlt=74,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
     },
     {
       sku: "15645",
       productName: "Classic Black Tuxedo",
       description: "Classic Black Cotton Sateen Tuxedo",
       price: "44.99",
-
-      picUrl:
-        "https://images.express.com/is/image/expressfashion/0039_03272013_0098_10_fb?cache=on&wid=361&fmt=jpeg&qlt=74,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
+      picUrl: "https://images.express.com/is/image/expressfashion/0039_03252011_0904_3_fb?cache=on&wid=361&fmt=jpeg&qlt=74,1&resmode=sharp2&op_usm=1,1,5,0&defaultImage=Photo-Coming-Soon"
      
     },
     {
