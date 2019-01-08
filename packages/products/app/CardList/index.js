@@ -4,6 +4,8 @@ import { jsx, css } from "@emotion/core";
 
 import Card from "../Card";
 
+import store from "../store/store";
+
 //--------Emotion  Styles -------/
 
 
@@ -14,7 +16,7 @@ const cardList = css `
 `
 const CardList = props => {
   const productList = props.data.allProducts.map((product, index) => (
-    <Card key={index} product={product} />
+    <Card key={index} product={product} store={store}/>
   ));
 
   return (

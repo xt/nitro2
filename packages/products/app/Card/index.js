@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from "react";
-// import LikeAction from "../LikeAction/index";
-
+import AddToCartAction from "../AddToCartAction/index";
 import { jsx, css } from "@emotion/core";
 import { from } from "zen-observable";
 // import createCache from "@emotion/cache";
@@ -14,28 +13,6 @@ margin: 1em 0;
 border-radius: 4px;
 `;
 
-const buttonStyle = css`
-  background: #009999 url(http://i.imgur.com/RWKrr8S.png);
-  background-repeat: no-repeat;
-  background-position: 2em 50%;
-  background-size: 2em;
-  border: 0;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #FFF;
-  font-weight: bold;
-  font-size: 13px;
-  padding: 1em 3em;
-  padding-left: 6em;
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-  &:hover {
-    background-color: #006B6B;
-    background-size: 2.2em;
-    background-position: 1.5em 50%;
-  }
-`;
 const ulStyle = css`
   list-style-type: none;
   padding: 0;
@@ -59,7 +36,7 @@ const nameStyle = css`
 `
 
 const Card = props => {
-  const { product } = props;
+  const { product, store } = props;
   return (
     <div css={cardStyle}>
       <img css={imageStyle} src={product.picUrl} />
@@ -69,7 +46,7 @@ const Card = props => {
           <li css={liStyle}>Price: Rs {product.price}</li>
           <li>In Stock</li>
         </ul>
-        <button css={buttonStyle}>Add to Cart  {/* <LikeAction /> */}</button>
+        <AddToCartAction store={store} item={product}/>
       </aside>
     </div>
   );

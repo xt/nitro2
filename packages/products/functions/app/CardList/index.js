@@ -9,16 +9,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _core = require("@emotion/core");
 
-var _apolloBoost = require("apollo-boost");
-
-var _reactApollo = require("react-apollo");
-
 var _Card = _interopRequireDefault(require("../Card"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query {\n    allProducts {\n      productName\n      picUrl\n      price\n      description\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  margin-left:5px;\n  flex-flow: row wrap;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -29,25 +25,19 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var GET_PRODUCTS = (0, _apolloBoost.gql)(_templateObject()); //--------Emotion  Styles -------/
+//--------Emotion  Styles -------/
+var cardList = (0, _core.css)(_templateObject());
 
-var CardList = function CardList() {
-  return _react.default.createElement(_reactApollo.Query, {
-    query: GET_PRODUCTS
-  }, function (_ref) {
-    var loading = _ref.loading,
-        error = _ref.error,
-        data = _ref.data;
-    console.log("------data-----", data);
-    if (loading) return _react.default.createElement("div", null, "Loading...");
-    if (error) return _react.default.createElement("div", null, "Error :");
-    return _react.default.createElement(_react.default.Fragment, null, data.allProducts.map(function (product, index) {
-      return _react.default.createElement(_Card.default, {
-        key: index,
-        product: product
-      });
-    }));
+var CardList = function CardList(props) {
+  var productList = props.data.allProducts.map(function (product, index) {
+    return (0, _core.jsx)(_Card.default, {
+      key: index,
+      product: product
+    });
   });
+  return (0, _core.jsx)(_react.default.Fragment, null, (0, _core.jsx)("header", null, (0, _core.jsx)("h1", null, "Products")), (0, _core.jsx)("div", {
+    css: cardList
+  }, productList));
 };
 
 var _default = CardList;

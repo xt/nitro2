@@ -8,12 +8,14 @@
     <!-- <script src="/vendor-loader.js"></script> -->
     <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> -->
     <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
-    <!-- <script src="/vendors/vendors.app.js"></script> -->
+    <script src="/vendors/vendors.app.js"></script>
   </head>
 
   <body>
-    <fragment src="http://localhost:9001/nitro2/us-central1/n2header"></fragment>
+    <!-- <fragment src="http://localhost:9001/nitro2/us-central1/n2header"></fragment> -->
+    <fragment src="http://localhost:3000/header/index.html"></fragment>
     <slot name="main"></slot>
-    <fragment src="http://localhost:9001/nitro2/us-central1/n2footer"></fragment>
+    <!-- <fragment src="http://localhost:9001/nitro2/us-central1/n2footer"></fragment> -->
+    <fragment src="http://localhost:3000/footer/index.html"></fragment>
   </body>
 </html>
