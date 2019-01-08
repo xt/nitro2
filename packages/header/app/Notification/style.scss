@@ -3,8 +3,18 @@
     position: relative;
     width: 50px;
 }
-.like-count-box {
+.cart-count-box {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 30px;
+    top: -22px;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    border: 1px solid;
+    background: white;
+}
+.cart-count {
+    display: inline-block;
+    padding: 4px 0;
 }
