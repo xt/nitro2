@@ -8,20 +8,22 @@ import store from "../store/store";
 
 //--------Emotion  Styles -------/
 
-
-const cardList = css `
+const headingStyle = css`
+  margin: 1rem 0.5rem 0rem 0.5rem;
+`;
+const cardList = css`
   display: flex;
-  margin-left:5px;
+  margin: 5px;
   flex-flow: row wrap;
-`
+`;
 const CardList = props => {
   const productList = props.data.allProducts.map((product, index) => (
-    <Card key={index} product={product} store={store}/>
+    <Card key={index} product={product} store={store} />
   ));
 
   return (
     <React.Fragment>
-      <header><h1>Products</h1></header>
+      <h2 css={headingStyle}>Products</h2>
       <div css={cardList}>{productList}</div>
     </React.Fragment>
   );
