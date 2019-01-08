@@ -23,11 +23,20 @@ const nameStyle = css`
 const Card = props => {
   const { product } = props;
   return (
-    <div css={cardStyle}>
-      <h3 css={nameStyle}>{product.productName}</h3>
+    <div className="card">
+   
       <img src={product.picUrl} />
-      <div>Rs {product.price}</div>
-      {/* <LikeAction /> */}
+       <h4 className="card-header--title">{product.productName}</h4>
+       <aside>
+        <ul>
+          <li>Price: Rs {product.price}</li>
+          <li>In Stock</li>
+        </ul>
+        <button>Add to Cart  {/* <LikeAction /> */}</button>
+      </aside>
+    
+  
+   
     </div>
   );
 };

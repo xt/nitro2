@@ -10,7 +10,12 @@ const CardList = props => {
     <Card key={index} product={product} />
   ));
 
-  return <React.Fragment>{productList}</React.Fragment>;
+  return (
+    <React.Fragment>
+      <header><h1>Products</h1></header>
+      <div className="card-list">{productList}</div>
+    </React.Fragment>
+  );
 };
 
 export default CardList;

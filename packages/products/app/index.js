@@ -5,6 +5,8 @@ import CardList from "./CardList";
 import mockResponse from "./data/mock-data.js";
 import ExecutionEnvironment from "exenv";
 
+import styles from './style.scss';
+
 // export default function getProducts() {
 //   return fetch("./data/data.json").then(res => res.json());
 // }
