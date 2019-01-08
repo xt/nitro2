@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@emotion/core": "^10.0.6",
     "css-loader": "^2.1.0",
     "exenv": "^1.2.2",
     "isomorphic-fetch": "^2.2.1",
