@@ -3,7 +3,6 @@ import { decorate, observable, computed } from "mobx";
 class headerStore {
     constructor() {
         this.likedItems = [];
-        this.likedItemsCount = 0;
     }
 
     get getLikedItemsCount() {
@@ -13,8 +12,7 @@ class headerStore {
 
 decorate(headerStore, {
     likedItems: observable,
-    likedItemsCount: observable,
     getLikedItemsCount: computed
 })
 
-export default headerStore;
+export default new headerStore();

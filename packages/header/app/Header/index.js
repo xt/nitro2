@@ -8,7 +8,7 @@ import NavItem from "../NavItem";
 import Notification from "../Notification";
 
 import store from "../store/store";
-//import pubSub from "../../../vendors/pubsub/pub-sub";
+import pubSub from "../../../vendors/pubsub/pub-sub";
 
 const headerStyle = css`
   align-items: center;
@@ -22,7 +22,7 @@ const navbarStyle = css`
   margin-left: 4em;
 `;
 
-const items = ["about", "products"];
+const items = ["about", "new-arrivals"];
 const Header = ({ active, setActive }) => (
     <React.Fragment>
       <div css={headerStyle}>
@@ -43,8 +43,8 @@ const Header = ({ active, setActive }) => (
     </React.Fragment>
 );
 
-// let subscription = pubSub.subscribe('itemLiked', (country) => {
-//   store.likedItems.push(country);
-// });
+let subscription = pubSub.subscribe('itemAdded', (country) => {
+  store.likedItems.push(country);
+});
 
 export default Header;
