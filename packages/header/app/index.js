@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
-
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
+import { hydrate } from "react-dom";
+import ExecutionEnvironment from "exenv";
 import Header from "./Header";
 
-const client = new ApolloClient({ uri: "https://countries.trevorblades.com/" });
 
-const ApolloApp = AppComponent => (
-  <ApolloProvider client={client}>
-    <Header />
-  </ApolloProvider>
-);
-
-render(ApolloApp(Header), document.getElementById("header"));
+if (ExecutionEnvironment.canUseDOM) {
+  hydrate(
+    <Header />, document.getElementById("header")
+  );
+}
