@@ -5,7 +5,7 @@ body {
 
 .card-list {
   display: flex;
-  margin-left:10px;
+  margin-left:5px;
  
    //justify-content: center;
   // align-items: flex-start;
@@ -35,7 +35,7 @@ body {
 /* This rule ist just because of the responsive images */
 @media (max-width: 1600px) {
   .card-list > .card {
-    max-width: 250px;
+    max-width: 350px;
   }
 }
 
@@ -53,7 +53,7 @@ img {
 
 @media (max-width: 1600px) {
   img {
-    width: 250px;
+    width: 350px;
   }
 }
 
