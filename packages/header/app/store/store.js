@@ -17,6 +17,4 @@ decorate(headerStore, {
     getLikedItemsCount: computed
 })
 
-window.headerStore = window.headerStore || new headerStore();
-
-export default window.headerStore;
+export default headerStore;

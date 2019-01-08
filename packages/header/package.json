@@ -7,14 +7,17 @@
     "build": "webpack",
     "start": "webpack-dev-server --open",
     "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel index.js -d functions",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bf": "npm run babel && npm run firebase:serve"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@emotion/core": "^10.0.6",
     "apollo-boost": "^0.1.23",
     "classnames": "^2.2.6",
+    "exenv": "^1.2.2",
     "graphql": "^14.0.2",
     "isomorphic-fetch": "^2.2.1",
     "mobx": "^5.8.0",

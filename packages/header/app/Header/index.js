@@ -1,24 +1,33 @@
+/**@jsx jsx */
 import React from "react";
-// import PropTypes from "prop-types";
+import { jsx, css } from "@emotion/core";
 
-import { gql } from "apollo-boost";
-import { Query } from "react-apollo";
 
 import Logo from "../Logo";
 import NavItem from "../NavItem";
 import Notification from "../Notification";
 
-import "./styles.scss";
-
 import store from "../store/store";
-import pubSub from "../../../vendors/pubsub/pub-sub";
+//import pubSub from "../../../vendors/pubsub/pub-sub";
+
+const headerStyle = css`
+  align-items: center;
+  background: #0d0d0d;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+`;
+const navbarStyle = css`
+  margin-left: 4em;
+`;
 
 const items = ["about", "products"];
 const Header = ({ active, setActive }) => (
     <React.Fragment>
-      <div className="header">
+      <div css={headerStyle}>
         <Logo />
-        <nav className="navbar">
+        <nav css={navbarStyle}>
           {items.map((item, index) => (
             <NavItem
               key={index}
@@ -33,14 +42,9 @@ const Header = ({ active, setActive }) => (
       </div>
     </React.Fragment>
 );
-// Header.propTypes = {
-//   items: PropTypes.arrayOf(PropTypes.number).isRequired,
-//   active: PropTypes.number.isRequired,
-//   setActive: PropTypes.func.isRequired
-// };
 
-let subscription = pubSub.subscribe('itemLiked', (country) => {
-  store.likedItems.push(country);
-});
+// let subscription = pubSub.subscribe('itemLiked', (country) => {
+//   store.likedItems.push(country);
+// });
 
 export default Header;
