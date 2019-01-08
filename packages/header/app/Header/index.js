@@ -13,21 +13,22 @@ import "./styles.scss";
 import store from "../store/store";
 import pubSub from "../../../vendors/pubsub/pub-sub";
 
-const items = ["about", "contact", "products"];
+const items = ["about", "products"];
 const Header = ({ active, setActive }) => (
     <React.Fragment>
       <div className="header">
         <Logo />
-        {/* total countries= {data.countries.length} */}
-        {items.map((item, index) => (
-          <NavItem
-            key={index}
-            index={index}
-            active={index === active}
-            onClick={setActive}
-            linkName={item}
-          />
-        ))}
+        <nav className="navbar">
+          {items.map((item, index) => (
+            <NavItem
+              key={index}
+              index={index}
+              active={index === active}
+              onClick={setActive}
+              linkName={item}
+            />
+          ))}
+        </nav>
         <Notification store={store}/>
       </div>
     </React.Fragment>
