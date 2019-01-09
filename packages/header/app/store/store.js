@@ -4,7 +4,7 @@ let firstRun = true;
 
 class HeaderStore {
     constructor(defaults) {
-        this.likedItems = defaults.likedItems || [];
+        this.likedItems = defaults ? defaults.likedItems : [];
     }
 
     get getLikedItemsCount() {
