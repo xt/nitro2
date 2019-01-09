@@ -1,6 +1,6 @@
 /**@jsx jsx */
 import React from "react";
-import { jsx, css } from "@emotion/core";
+import { jsx, css } from "emotion";
 
 import Logo from "../Logo";
 import NavItem from "../NavItem";
