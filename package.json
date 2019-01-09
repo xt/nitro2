@@ -25,6 +25,7 @@
     "webpack": "^4.28.2"
   },
   "dependencies": {
+    "compression": "^1.7.3",
     "config": "^3.0.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",

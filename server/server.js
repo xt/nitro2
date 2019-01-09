@@ -1,5 +1,6 @@
 // const config = require("config");
 const express = require("express");
+var compression = require("compression");
 const Tailor = require("node-tailor");
 // const path = require('path');
 const { fetchTemplate, filterRequestHeaders } = require("./tailor");
@@ -10,7 +11,7 @@ const tailor = new Tailor({
 });
 
 const app = express();
-
+app.use(compression());
 app.use(express.static("dist"));
 /*Used for testing without tailorjs */
 // app.get("/about", (req, res) => {

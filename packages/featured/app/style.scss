@@ -1,0 +1,100 @@
+body {
+  padding-top:20px;
+}
+/* Flex-related code */
+
+.card-list {
+  display: flex;
+  margin-left:5px;
+ 
+   //justify-content: center;
+  // align-items: flex-start;
+  // align-content: flex-start;
+  flex-flow: row wrap;
+  /* Or space-between or space-around */
+  > .card {
+    max-width: 400px;
+    background: #fff;
+    padding: 0.5em;
+    margin: 1em 0;
+    border-radius: 4px;
+    > p {
+      flex-grow: 1;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  aside {
+    width: 100%;
+  }
+}
+
+
+/* This rule ist just because of the responsive images */
+@media (max-width: 1600px) {
+  .card-list > .card {
+    max-width: 350px;
+  }
+}
+
+/* Basic styling for UI */
+
+body {
+  font: 16px "Titillium Web", sans-serif;
+  margin: 0;
+}
+
+img {
+  width: 400px;
+  border-radius: 2px;
+}
+
+@media (max-width: 1600px) {
+  img {
+    width: 350px;
+  }
+}
+
+h4 {
+ margin-bottom:0;
+}
+header{text-align: center}
+
+
+button {
+  background: #009999 url(http://i.imgur.com/RWKrr8S.png);
+  background-repeat: no-repeat;
+  background-position: 2em 50%;
+  background-size: 2em;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 1em 3em;
+  padding-left: 6em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  &:hover {
+    background-color: #006B6B;
+    background-size: 2.2em;
+    background-position: 1.5em 50%;
+  }
+}
+
+.card-list {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top:0;
+  }
+  li {
+    list-style: none;
+    padding: 0.3em 0;
+    border-radius: 1em;
+  }
+}
