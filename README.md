@@ -8,6 +8,6 @@
 
 `npm run build:apps`
 
-`npm run start:dev`
+`npm run start`
 
 on the browser `http://localhost:3000/home`
