@@ -22,7 +22,8 @@
     "isomorphic-fetch": "^2.2.1",
     "mobx": "^5.8.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "zen-observable": "^0.8.11"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
