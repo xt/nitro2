@@ -18,10 +18,10 @@ const headerStyle = css`
   padding: 0 1em;
 `;
 const navbarStyle = css`
-  margin: 3rem 0 0 -50rem;
+  margin: 3rem 0 0 0rem;
 `;
 
-const items = ["Home", "About", "New-Arrivals"];
+const items = ["Home", "About", "New-Arrivals", "VR"];
 const Header = ({ active, setActive }) => (
   <React.Fragment>
     <div css={headerStyle}>

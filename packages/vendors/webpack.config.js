@@ -8,9 +8,7 @@ module.exports = {
     libraryTarget: "umd"
   },
   module: {
-    rules: [
-      { test: /\.(js)$/, use: "babel-loader" }
-    ]
+    rules: [{ test: /\.(js)$/, use: "babel-loader" }]
   },
   mode: "development"
 };

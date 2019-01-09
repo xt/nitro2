@@ -8,25 +8,16 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
     publicPath: `/${PACKAGE.name}`
   },
-  externals: {
-    // react: {
-    //   commonjs: 'react',
-    //   amd: 'react',
-    //   root: 'React'
-    // },
-    // "react-dom": {
-    //   commonjs: 'react-dom',
-    //   amd: 'react-dom',
-    //   root: 'ReactDOM'
-    // }
-    // react: "React",
-    // "react-dom": "ReactDOM"
-  },
+  // externals: {
+  //   react: "react",
+  //   "react-dom": "react-dom",
+  //   emotion: "emotion"
+  // },
   module: {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
-      { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" },
+      { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]
   },
   mode: "development",

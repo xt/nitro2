@@ -15,15 +15,12 @@
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.0.6",
-    "apollo-boost": "^0.1.23",
     "classnames": "^2.2.6",
     "exenv": "^1.2.2",
-    "graphql": "^14.0.2",
     "isomorphic-fetch": "^2.2.1",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
     "react": "^16.7.0",
-    "react-apollo": "^2.3.3",
     "react-dom": "^16.7.0",
     "sass-loader": "^7.1.0"
   },

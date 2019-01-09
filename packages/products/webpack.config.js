@@ -9,6 +9,11 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
     publicPath: `/${PACKAGE.name}`
   },
+  // externals: {
+  //   react: "react",
+  //   "react-dom": "react-dom",
+  //   emotion: "emotion"
+  // },
   module: {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },
@@ -16,7 +21,7 @@ module.exports = {
       { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]
   },
-  mode: "development",
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       template: "app/index.html"

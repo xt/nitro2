@@ -8,7 +8,20 @@
     <!-- <script src="/vendor-loader.js"></script> -->
     <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> -->
     <!-- <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
-    <script src="/vendors/vendors.app.js"></script>
+    <script src="http://localhost:3000/vendors/vendors.app.js"></script>
+
+    <!-- <script>
+      (function(d) {
+        require(d);
+        var arr = ["react", "react-dom"];
+        while ((i = arr.pop()))
+          (function(dep) {
+            define(dep, d, function(b) {
+              return b[dep];
+            });
+          })(i);
+      })(["/vendors/vendors.app.js"]);
+    </script> -->
 
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
@@ -27,6 +40,6 @@
     <fragment src="http://localhost:3000/header/index.html"></fragment>
     <slot name="main"></slot>
     <!-- <fragment src="http://localhost:9001/nitro2/us-central1/n2footer"></fragment> -->
-    <fragment src="http://localhost:3000/footer/index.html"></fragment>
+    <fragment async src="http://localhost:3000/footer/index.html"></fragment>
   </body>
 </html>

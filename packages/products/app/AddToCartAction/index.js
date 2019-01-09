@@ -11,7 +11,7 @@ const buttonStyle = css`
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   font-size: 13px;
   padding: 1em 3em;
@@ -20,28 +20,30 @@ const buttonStyle = css`
   display: block;
   width: 100%;
   &:hover {
-    background-color: #006B6B;
+    background-color: #006b6b;
     background-size: 2.2em;
     background-position: 1.5em 50%;
   }
 `;
 
 class AddToCartAction extends React.Component {
-    constructor(props) {
-        super(props);
-        this.store = props.store;
-        this.item = props.item;
-        this.emitLikeAction = this.emitLikeAction.bind(this);
-    }
-    emitLikeAction(event) {
-        this.store.likedItems.push(this.item);
-        pubSub.publish('itemAdded', this.item);
-    }
-    render() {
-        return (
-            <button css={buttonStyle} onClick={this.emitLikeAction}>Add to Cart </button>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.store = props.store;
+    this.item = props.item;
+    this.emitLikeAction = this.emitLikeAction.bind(this);
+  }
+  emitLikeAction(event) {
+    this.store.likedItems.push(this.item);
+    pubSub.publish("itemAdded", this.item);
+  }
+  render() {
+    return (
+      <button css={buttonStyle} onClick={this.emitLikeAction}>
+        Add to Cart{" "}
+      </button>
+    );
+  }
 }
 
 export default AddToCartAction;

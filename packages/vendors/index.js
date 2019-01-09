@@ -8,7 +8,7 @@ import turbolinksBootstrap from "./turbolinks/turbolinks-bootstrap";
 
 module.exports = window.React;
 
-// exports.react =  require("react");
+// exports.react = require("react");
 // exports["react-dom"] = require("react-dom");
 // exports.mobx = require("mobx");
-// exports["mobx-react"] = require("mobx-react"); 
+// exports["mobx-react"] = require("mobx-react");
