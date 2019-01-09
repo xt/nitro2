@@ -1,8 +1,10 @@
-import { decorate, observable, computed } from "mobx";
+import { decorate, observable, computed, autorun, toJS } from "mobx";
 
-class headerStore {
-    constructor() {
-        this.likedItems = [];
+let firstRun = true;
+
+class HeaderStore {
+    constructor(defaults) {
+        this.likedItems = defaults.likedItems || [];
     }
 
     get getLikedItemsCount() {
@@ -10,9 +12,27 @@ class headerStore {
     }
 }
 
-decorate(headerStore, {
+decorate(HeaderStore, {
     likedItems: observable,
     getLikedItemsCount: computed
-})
+});
 
-export default new headerStore();
+let cachedStore = window.localStorage && window.localStorage.getItem("headerStore");
+
+const headerStoreInstance = new HeaderStore(JSON.parse(cachedStore));
+
+autorun(() => {
+    const storeCopy = JSON.stringify(toJS(headerStoreInstance));
+    if (!firstRun) {
+        hydrateStore(storeCopy);
+    }
+    firstRun = false;
+});
+
+const hydrateStore = (store) => {
+    if(window.localStorage) {
+        localStorage.setItem("headerStore", store);
+    }
+};
+
+export default headerStoreInstance;
