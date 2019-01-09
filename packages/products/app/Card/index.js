@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import AddToCartAction from "../AddToCartAction/index";
-import { jsx, css } from "emotion";
+import { jsx, css } from "@emotion/core";
 
 const cardStyle = css`
   max-width: 400px;

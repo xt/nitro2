@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { jsx, css } from "emotion";
+import { jsx, css } from "@emotion/core";
 
 const navItem = css`
   color: #fff;

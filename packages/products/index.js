@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
-const Cardlist = require("./app/cardList/index").default;
+const Cardlist = require("./app/CardList/index").default;
 import mockResponse from "./app/data/mock-data";
 const express = require("express");
 

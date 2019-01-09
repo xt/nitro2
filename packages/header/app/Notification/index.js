@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import React from "react";
 import { observer } from "mobx-react";
-import { jsx, css } from "emotion";
+import { jsx, css } from "@emotion/core";
 
 const notifBox = css`
   margin: 2rem 0 0 0;

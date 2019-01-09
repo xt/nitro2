@@ -1,6 +1,6 @@
 /**@jsx jsx */
 import React from "react";
-import { jsx, css } from "emotion";
+import { jsx, css } from "@emotion/core";
 
 const footerStyle = css`
   background: #0d0d0d;
