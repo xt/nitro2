@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import AddToCartAction from "../AddToCartAction/index";
-import { jsx, css } from "@emotion/core";
-import { from } from "zen-observable";
-// import createCache from "@emotion/cache";
+import { jsx, css } from "emotion";
 
 const cardStyle = css`
   max-width: 400px;

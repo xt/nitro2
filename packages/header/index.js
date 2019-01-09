@@ -1,12 +1,12 @@
 const functions = require("firebase-functions");
 const React = require("react");
-const ReactDOMSerer = require("react-dom/server");
+const ReactDOMServer = require("react-dom/server");
 const Header = require("./app/Header/index").default;
 const express = require("express");
 
 const app = express();
 app.get("**", (req, res) => {
-  const html = ReactDOMSerer.renderToString(<Header />);
+  const html = ReactDOMServer.renderToString(<Header />);
   res.set("Cache-Control", "public, max-age=600, s-max-age=1200");
   res.send(html);
 });

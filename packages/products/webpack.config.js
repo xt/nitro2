@@ -1,7 +1,6 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-// var CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./app/index.js",
   output: {
@@ -9,11 +8,12 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
     publicPath: (process.env.NODE_ENV === 'dev') ? `` : `/${PACKAGE.name}`
   },
-  // externals: {
-  //   react: "react",
-  //   "react-dom": "react-dom",
-  //   emotion: "emotion"
-  // },
+  externals: {
+    react: "react",
+    "react-dom": "reactDOM",
+    emotion: "emotion",
+    mobx: "mobx"
+  },
   module: {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },
@@ -26,9 +26,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "app/index.html"
     })
-    // new CopyWebpackPlugin([{
-    //   from: path.resolve(__dirname, "./app/", "images/"),
-    //   to: path.resolve(__dirname, "../..", "dist", PACKAGE.name, "images")
-    // }]),
   ]
 };

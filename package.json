@@ -9,7 +9,7 @@
     "build:apps": "lerna run build",
     "start-apps": "lerna run --parallel start",
     "watch-apps": "lerna run --parallel watch",
-    "start:dev": "nodemon server"
+    "start:dev": "nodemon server/server"
   },
   "author": "",
   "license": "MIT",
