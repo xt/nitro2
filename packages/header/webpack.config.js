@@ -2,12 +2,14 @@ var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
+
+
 module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "../..", "dist/", PACKAGE.name),
     filename: `${PACKAGE.name}.app.js`,
-    publicPath: `/${PACKAGE.name}`
+    publicPath: (process.env.NODE_ENV === 'dev') ? `` : `/${PACKAGE.name}`
   },
   // externals: {
   //   react: "react",
