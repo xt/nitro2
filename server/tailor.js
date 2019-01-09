@@ -1,6 +1,6 @@
 const path = require("path");
 // Don't do that!
-const fetchTemplateFs = require("../node_modules/node-tailor/lib/fetch-template");
+const fetchTemplateFs = require("node-tailor/lib/fetch-template");
 const ACCEPT_HEADERS = [
   "accept-language",
   "referer",

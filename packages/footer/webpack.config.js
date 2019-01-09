@@ -20,7 +20,7 @@ module.exports = {
       { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]
   },
-  mode: "development",
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       template: "app/index.html"

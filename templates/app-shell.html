@@ -41,5 +41,13 @@
     <slot name="main"></slot>
     <!-- <fragment src="http://localhost:9001/nitro2/us-central1/n2footer"></fragment> -->
     <fragment async src="http://localhost:3000/footer/index.html"></fragment>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/dist/assets/sw.js").then(function() {
+          console.log("Service Worker Registered");
+        });
+      }
+    </script>
   </body>
 </html>

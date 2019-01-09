@@ -9,3 +9,5 @@
 `npm run build:apps`
 
 `npm run start:dev`
+
+on the browser `http://localhost:3000/home`
