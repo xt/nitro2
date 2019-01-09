@@ -8,11 +8,11 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
     publicPath: `/${PACKAGE.name}`
   },
-  // externals: {
-  //   react: "react",
-  //   "react-dom": "react-dom",
-  //   emotion: "emotion"
-  // },
+  externals: {
+    react: "react",
+    "react-dom": "reactDOM",
+    emotion: "emotion"
+  },
   module: {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },
