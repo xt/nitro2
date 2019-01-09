@@ -10,8 +10,8 @@
     background: #e2e2e2
       url(https://devitems.com/html/69fashion-preview/69fashion/img/slider-1/slider-1-1.jpg)
       no-repeat;
-    background-size: 100% 90%;
-    /*https://devitems.com/html/69fashion-preview/69fashion/img/slider-1/slider-1-1.jpg*/
+    background-size: cover;
+    background-position: 50%;
     display: flex;
     width: 100%;
     height: 100%;
@@ -24,8 +24,12 @@
     width: 530px;
     padding: 30px;
     font-size: 1.3em;
-    margin: 0 auto 0 300px;
-    background: #444;
+    background-image: linear-gradient(
+      to left,
+      rgba(68, 68, 68, 0),
+      rgba(68, 68, 68, 1)
+    );
+    margin: 0 auto 0 15%;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -55,6 +59,24 @@
     display: inline-block;
     margin-top: 20px;
   }
+
+  @media (max-width: 1400px) {
+    .landing section {
+      margin-left: 11%;
+      width:430px;
+    }
+  }
+  @media (max-width: 1160px) {
+    .landing section {
+      margin-left: 7%;
+      width:350px;
+    }
+  }
+  @media (max-width: 860px) {
+    .landing section {
+      margin-left: 3%;
+    }
+  }
 </style>
 
 <main slot="main">
@@ -68,7 +90,7 @@
         since the 1500s, when an unknown printer took a galley of type and
         scrambled it to make a type specimen book.
       </p>
-      <a href="/products" class="button">Shop Now</a>
+      <a href="/New-Arrivals" class="button">Shop Now</a>
     </section>
   </div>
 </main>

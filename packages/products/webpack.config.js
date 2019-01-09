@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../..", "dist", PACKAGE.name),
     filename: `${PACKAGE.name}.app.js`,
-    publicPath: `/${PACKAGE.name}`
+    publicPath: (process.env.NODE_ENV === 'dev') ? `` : `/${PACKAGE.name}`
   },
   externals: {
     react: "react",
