@@ -1,19 +1,25 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+var isProd = process.env.NODE_ENV !== 'dev';
+var externals = {};
+if(isProd) {
+  externals = {
+    react: "react",
+    "react-dom": "reactDOM",
+    emotion: "@emotion/core",
+    mobx: "mobx"
+  };
+}
+
 module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, "../..", "dist/", PACKAGE.name),
     filename: `${PACKAGE.name}.app.js`,
-    publicPath: (process.env.NODE_ENV === 'dev') ? `` : `/${PACKAGE.name}`
+    publicPath:  isProd ? `/${PACKAGE.name}` : ``
   },
-  externals: {
-    react: "react",
-    "react-dom": "reactDOM",
-    emotion: "emotion",
-    mobx: "mobx"
-  },
+  externals: externals,
   module: {
     rules: [
       { test: /\.(js)$/, use: "babel-loader" },

@@ -1,7 +1,7 @@
 /**@jsx jsx */
 import React from "react";
 import pubSub from "../../../vendors/pubsub/pub-sub";
-import { jsx, css } from "emotion";
+import { jsx, css } from "@emotion/core";
 
 const buttonStyle = css`
   background: #009999 url(http://i.imgur.com/RWKrr8S.png);
