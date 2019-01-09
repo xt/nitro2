@@ -4,7 +4,7 @@
   "description": "Microfrontend framework with React",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server/server",
     "install:apps": "lerna bootstrap",
     "build:apps": "lerna run build",
     "start-apps": "lerna run --parallel start",

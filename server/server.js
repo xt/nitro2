@@ -2,7 +2,7 @@
 const express = require("express");
 const Tailor = require("node-tailor");
 // const path = require('path');
-const { fetchTemplate, filterRequestHeaders } = require("./src");
+const { fetchTemplate, filterRequestHeaders } = require("./tailor");
 
 const tailor = new Tailor({
   fetchTemplate,
@@ -20,4 +20,4 @@ app.use(express.static("dist"));
 app.use(tailor.requestHandler);
 
 const port = 3000;
-app.listen(port, () => console.log(`Tailor server listening on port ${port}`));
+app.listen(port, () => console.log(`Server listening on port ${port}`));
