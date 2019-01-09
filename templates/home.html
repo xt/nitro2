@@ -10,7 +10,8 @@
     background: #e2e2e2
       url(https://devitems.com/html/69fashion-preview/69fashion/img/slider-1/slider-1-1.jpg)
       no-repeat;
-    background-size: 100% 90%;
+    background-size: cover;
+    background-position: 50%;
     /*https://devitems.com/html/69fashion-preview/69fashion/img/slider-1/slider-1-1.jpg*/
     display: flex;
     width: 100%;
@@ -18,14 +19,23 @@
     align-items: center;
     justify-content: center;
   }
+  @media screen and (max-width: 768px) {
+    .landing {
+      background-position: 70%;
+    }
+  }
 
   .landing section {
     height: auto;
     width: 530px;
     padding: 30px;
     font-size: 1.3em;
-    margin: 0 auto 0 300px;
-    background: #444;
+    margin: auto;
+    background-image: linear-gradient(
+      to left,
+      rgba(68, 68, 68, 0),
+      rgba(68, 68, 68, 1)
+    );
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
   }
