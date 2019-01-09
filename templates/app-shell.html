@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>React Nitro 2</title>
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/style.css" /> -->
     <script src="http://localhost:3000/vendors/vendors.app.js"></script>
 
     <link
@@ -27,11 +27,11 @@
     <fragment async src="http://localhost:3000/footer/index.html"></fragment>
 
     <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/dist/assets/sw.js").then(function() {
-          console.log("Service Worker Registered");
-        });
-      }
+      // if ("serviceWorker" in navigator) {
+      //   navigator.serviceWorker.register("./dist/assets/sw.js").then(function() {
+      //     console.log("Service Worker Registered");
+      //   });
+      // }
     </script>
   </body>
 </html>
