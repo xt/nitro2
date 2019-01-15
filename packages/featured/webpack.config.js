@@ -1,9 +1,9 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-var isProd = process.env.NODE_ENV !== 'dev';
+var isProd = process.env.NODE_ENV !== "dev";
 var externals = {};
-if(isProd) {
+if (isProd) {
   externals = {
     react: "react",
     "react-dom": "reactDOM",
@@ -12,16 +12,19 @@ if(isProd) {
   };
 }
 module.exports = {
-  entry: "./app/index.js",
+  entry: "./app/index.tsx",
   output: {
     path: path.resolve(__dirname, "../..", "dist", PACKAGE.name),
     filename: `${PACKAGE.name}.app.js`,
-    publicPath:  isProd ? `/${PACKAGE.name}` : ``
+    publicPath: isProd ? `/${PACKAGE.name}` : ``
   },
+  devtool: "source-map",
   externals: externals,
+
   module: {
     rules: [
-      { test: /\.(js)$/, use: "babel-loader" },
+      { test: /\.tsx?$/, use: "awesome-typescript-loader" },
+      { enforce: "pre", test: /\.js$/, use: "source-map-loader" },
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]

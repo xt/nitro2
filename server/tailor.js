@@ -20,7 +20,6 @@ module.exports = {
     const { public: publicFragment } = attributes;
     const { headers = {} } = request;
 
-    // Headers are not forwarded to public fragment for security reasons
     return publicFragment
       ? {}
       : ACCEPT_HEADERS.reduce((newHeaders, key) => {

@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx, css } from "@emotion/core";
-
 import Card from "../Card";
-
-import store from "../store/store";
 
 //--------Emotion  Styles -------/
 
@@ -16,14 +13,27 @@ const cardList = css`
   margin: 5px;
   flex-flow: row wrap;
 `;
-const CardList = props => {
-  const productList = props.data.allProducts.map((product, index) => (
-    <Card key={index} product={product} store={store} />
+
+interface Data {
+  data: Array<Product>;
+}
+
+interface Product {
+  sku: string;
+  productName: string;
+  picUrl: string;
+  price: string;
+}
+
+const CardList = (props: Data) => {
+  const productList = props.data.map((product: Product, index: any) => (
+    <Card key={index} product={product} />
   ));
 
   return (
     <React.Fragment>
-      <h2 css={headingStyle}>Products</h2>
+      <h2 css={headingStyle}>My best products</h2>
+
       <div css={cardList}>{productList}</div>
     </React.Fragment>
   );

@@ -21,7 +21,7 @@ const navbarStyle = css`
   margin: 3rem 0 0 0rem;
 `;
 
-const items = ["Home", "About", "New-Arrivals", "VR"];
+const items = ["Home", "About", "New-Arrivals"];
 const Header = ({ active, setActive }) => (
   <React.Fragment>
     <div css={headerStyle}>

@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import React from "react";
-import AddToCartAction from "../AddToCartAction/index";
 import { jsx, css } from "@emotion/core";
 
 const cardStyle = css`
@@ -33,8 +32,8 @@ const nameStyle = css`
   margin-bottom: 0;
 `;
 
-const Card = props => {
-  const { product, store } = props;
+const Card = (props: any) => {
+  const { product } = props;
   return (
     <div css={cardStyle}>
       <img css={imageStyle} src={product.picUrl} />
@@ -43,7 +42,6 @@ const Card = props => {
         <ul css={ulStyle}>
           <li css={liStyle}>Price: Rs {product.price}</li>
         </ul>
-        <AddToCartAction store={store} item={product} />
       </aside>
     </div>
   );
