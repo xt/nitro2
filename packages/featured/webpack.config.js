@@ -20,7 +20,6 @@ module.exports = {
   },
   devtool: "source-map",
   externals: externals,
-
   module: {
     rules: [
       { test: /\.tsx?$/, use: "awesome-typescript-loader" },
@@ -28,6 +27,9 @@ module.exports = {
       { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
   mode: "production",
   plugins: [
