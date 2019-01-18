@@ -20,7 +20,7 @@ var _store = _interopRequireDefault(require("../store/store"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin-left: 4em;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 3rem 0 0 0rem;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -41,10 +41,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-//import pubSub from "../../../vendors/pubsub/pub-sub";
+// import pubSub from "../../../vendors/pubsub/pub-sub";
 var headerStyle = (0, _core.css)(_templateObject());
 var navbarStyle = (0, _core.css)(_templateObject2());
-var items = ["about", "products"];
+var items = ["Home", "About", "New-Arrivals"];
 
 var Header = function Header(_ref) {
   var active = _ref.active,
@@ -64,8 +64,13 @@ var Header = function Header(_ref) {
   })), (0, _core.jsx)(_Notification.default, {
     store: _store.default
   })));
-}; // let subscription = pubSub.subscribe('itemLiked', (country) => {
-//   store.likedItems.push(country);
+}; // let subscriptionAddItem = pubSub.subscribe("itemAdded", item => {
+//   store.likedItems.push(item);
+// });
+// let subscriptionRemoveItem = pubSub.subscribe("itemRemoved", item => {
+//   store.likedItems.splice(store.likedItems.findIndex((itemInStore) => {
+//     return itemInStore.sku === item.sku
+//   }), 1);
 // });
 
 

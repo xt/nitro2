@@ -20,7 +20,6 @@ function () {
     _classCallCheck(this, headerStore);
 
     this.likedItems = [];
-    this.likedItemsCount = 0;
   }
 
   _createClass(headerStore, [{
@@ -35,8 +34,9 @@ function () {
 
 (0, _mobx.decorate)(headerStore, {
   likedItems: _mobx.observable,
-  likedItemsCount: _mobx.observable,
   getLikedItemsCount: _mobx.computed
 });
-var _default = headerStore;
+
+var _default = new headerStore();
+
 exports.default = _default;
