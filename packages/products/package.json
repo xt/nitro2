@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "NODE_ENV=dev webpack-dev-server --open",
-    "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel index.js -d functions",
+    "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel dist -d functions/dist && node_modules/.bin/babel index.js -d functions",
     "test": "echo \"Error: no test specified\" && exit 1",
     "firebase:serve": "firebase serve",
     "bf": "npm run babel && npm run firebase:serve"

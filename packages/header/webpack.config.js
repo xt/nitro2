@@ -1,13 +1,14 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var isProd = process.env.NODE_ENV !== 'dev';
 var externals = {};
 if(isProd) {
   externals = {
     react: "react",
     "react-dom": "reactDOM",
-    emotion: "@emotion/core",
+    "emotion": "@emotion/core",
     mobx: "mobx"
   };
 }
