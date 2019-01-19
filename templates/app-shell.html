@@ -63,36 +63,23 @@
         transform: rotate(225deg);
         transition: 300ms ease-in-out all;
       }
-      
     </style>
   </head>
 
   <body>
-    <!-- Header SSR without hydrate -->
-    <!-- <fragment
-      src="https://us-central1-nitro2.cloudfunctions.net/n2header/index"
-    ></fragment> -->
-
-    <!-- Header SSR with hydrate -->
     <!-- <fragment
       src="https://us-central1-nitro2.cloudfunctions.net/n2headerSSR/index"
     ></fragment> -->
 
     <fragment src="http://localhost:3000/header/index.html"></fragment>
 
-
-
-
     <slot name="main"></slot>
 
-    <!-- Footer SSR without hydrate -->
     <!-- <fragment
       src="https://us-central1-nitro2.cloudfunctions.net/n2footer/index"
     ></fragment> -->
 
     <fragment src="http://localhost:3000/footer/index.html"></fragment>
-
-
 
     <!-- Code for adding chatbot component -->
     <!-- <fragment
