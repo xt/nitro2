@@ -9,7 +9,8 @@ if(isProd) {
     react: "react",
     "react-dom": "reactDOM",
     "emotion": "@emotion/core",
-    mobx: "mobx"
+    mobx: "mobx",
+    pubSub: "pubSub"
   };
 }
 

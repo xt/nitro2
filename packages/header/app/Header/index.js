@@ -7,7 +7,7 @@ import NavItem from "../NavItem";
 import Notification from "../Notification";
 
 import store from "../store/store";
-import pubSub from "../../../vendors/pubsub/pub-sub";
+import pubSub from "../vendors/pubsub/pub-sub";
 
 const headerStyle = css`
   align-items: center;
