@@ -20,4 +20,4 @@ app.get("/index", (req, res) => {
   res.send(template);
 
 });
-export let n2productsSSR = functions.https.onRequest(app);
+export let n2productsPubSub = functions.https.onRequest(app);

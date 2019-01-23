@@ -18,4 +18,4 @@ app.get("/index", (req, res) => {
   res.send(template);
 });
 
-export let n2headerSSR = functions.https.onRequest(app);
+export let n2headerPubSub = functions.https.onRequest(app);

@@ -1,6 +1,6 @@
 /**@jsx jsx */
 import React from "react";
-import pubSub from "../../../vendors/pubsub/pub-sub";
+import pubSub from "../vendors/pubsub/pub-sub";
 import { jsx, css } from "@emotion/core";
 
 const addBtnStyle = css`
