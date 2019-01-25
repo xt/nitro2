@@ -1,9 +1,13 @@
 var path = require("path");
 var PACKAGE = require("./package.json");
+var isProd = process.env.NODE_ENV !== 'dev';
+
+var outputPathFragment = isProd ? "../../dist" + PACKAGE.name : "dist";
+
 module.exports = {
   entry: "./index.js",
   output: {
-    path: path.resolve(__dirname, "../..", "dist", PACKAGE.name),
+    path: path.resolve(__dirname, outputPathFragment),
     filename: `${PACKAGE.name}.app.js`
   },
   module: {
