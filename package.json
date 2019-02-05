@@ -15,6 +15,7 @@
     "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
     "lint:tslint": "tslint --project ./tsconfig.json --config ./tslint.json",
     "lint:js": "npm run lint:eslint -- . ",
+    "lint:js:fix": "npm run lint:eslint:fix -- . ",
     "lint:staged": "lint-staged"
   },
   "lint-staged": {
