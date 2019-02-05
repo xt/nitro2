@@ -11,8 +11,8 @@
     "watch-apps": "lerna run --parallel watch",
     "start:dev": "nodemon server/server",
     "lint": "npm run lint:js",
-    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
-    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:staged": "lint-staged"
   },
