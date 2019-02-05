@@ -13,12 +13,16 @@
     "lint": "npm run lint:js",
     "lint:eslint": "eslint --ignore-path .gitignore",
     "lint:eslint:fix": "eslint --ignore-path .gitignore --fix",
+    "lint:tslint": "tslint --project ./tsconfig.json --config ./tslint.json",
     "lint:js": "npm run lint:eslint -- . ",
     "lint:staged": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
       "npm run lint:js"
+    ],
+    "*.ts{,x}": [
+      "npm run lint:tslint"
     ]
   },
   "pre-commit": "lint:staged",
@@ -40,6 +44,11 @@
     "nodemon": "^1.18.9",
     "pre-commit": "^1.2.2",
     "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.1",
     "webpack": "^4.28.2"
   },
   "dependencies": {
