@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
+    "build-dev": "NODE_ENV=dev webpack",
     "start": "NODE_ENV=dev webpack-dev-server --open",
     "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel index.js -d functions",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,8 +27,7 @@
     "isomorphic-fetch": "^2.2.1",
     "mobx": "^5.8.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "zen-observable": "^0.8.11"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

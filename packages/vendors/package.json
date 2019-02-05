@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build-dev": "NODE_ENV=dev webpack"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.0.6",
+    "exenv": "^1.2.2",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
     "react": "^16.7.0",

@@ -7,7 +7,7 @@ import NavItem from "../NavItem";
 import Notification from "../Notification";
 
 import store from "../store/store";
-import pubSub from "../../../vendors/pubsub/pub-sub";
+import pubSub from "../vendors/pubsub/pub-sub";
 
 const headerStyle = css`
   align-items: center;
@@ -42,8 +42,14 @@ const Header = ({ active, setActive }) => (
   </React.Fragment>
 );
 
-let subscription = pubSub.subscribe("itemAdded", country => {
-  store.likedItems.push(country);
+let subscriptionAddItem = pubSub.subscribe("itemAdded", item => {
+  store.likedItems.push(item);
+});
+
+let subscriptionRemoveItem = pubSub.subscribe("itemRemoved", item => {
+  store.likedItems.splice(store.likedItems.findIndex((itemInStore) => {
+    return itemInStore.sku === item.sku
+  }), 1);
 });
 
 export default Header;

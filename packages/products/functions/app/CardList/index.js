@@ -51,7 +51,7 @@ var CardList = function CardList(props) {
   });
   return (0, _core.jsx)(_react.default.Fragment, null, (0, _core.jsx)("h2", {
     css: headingStyle
-  }, "New Arrivals"), (0, _core.jsx)("div", {
+  }, "Products"), (0, _core.jsx)("div", {
     css: cardList
   }, productList));
 };

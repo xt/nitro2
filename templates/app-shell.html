@@ -67,14 +67,23 @@
   </head>
 
   <body>
+    <!-- <fragment
+      src="https://us-central1-nitro2.cloudfunctions.net/n2headerSSR/index"
+    ></fragment> -->
+
+    <!-- <fragment src="http://localhost:3000/header/index.html"></fragment> -->
+    
+    <!-- Header SSR with pubsub -->
     <fragment
-      src="https://us-central1-nitro2.cloudfunctions.net/n2header/index"
+      src="https://us-central1-nitro2.cloudfunctions.net/n2headerPubSub/index"
     ></fragment>
-    <!-- <fragment src="http://localhost:3000/header/index.html"></fragment>
-    <slot name="main"></slot> -->
+
+    <slot name="main"></slot>
+
     <!-- <fragment
       src="https://us-central1-nitro2.cloudfunctions.net/n2footer/index"
     ></fragment> -->
+
     <fragment src="http://localhost:3000/footer/index.html"></fragment>
 
     <!-- Code for adding chatbot component -->

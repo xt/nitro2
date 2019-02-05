@@ -12,10 +12,12 @@ if(isProd) {
     mobx: "mobx"
   };
 }
+var outputPathFragment = isProd ? "../../dist" + PACKAGE.name : "dist";
+
 module.exports = {
   entry: "./app/index.js",
   output: {
-    path: path.resolve(__dirname, "../..", "dist", PACKAGE.name),
+    path: path.resolve(__dirname, outputPathFragment),
     filename: `${PACKAGE.name}.app.js`,
     publicPath:  isProd ? `/${PACKAGE.name}` : ``
   },

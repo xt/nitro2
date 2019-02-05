@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx, css } from "@emotion/core";
+import * as React from "react";
+import { jsx, css } from "@emotion/core"
 
 const cardStyle = css`
   max-width: 400px;

@@ -11,23 +11,28 @@ if (isProd) {
     mobx: "mobx"
   };
 }
+
+var outputPathFragment = isProd ? "../../dist" + PACKAGE.name : "dist";
+
 module.exports = {
   entry: "./app/index.tsx",
   output: {
-    path: path.resolve(__dirname, "../..", "dist", PACKAGE.name),
+    path: path.resolve(__dirname, outputPathFragment),
     filename: `${PACKAGE.name}.app.js`,
     publicPath: isProd ? `/${PACKAGE.name}` : ``
   },
   devtool: "source-map",
   externals: externals,
-
   module: {
     rules: [
       { test: /\.tsx?$/, use: "awesome-typescript-loader" },
-      { enforce: "pre", test: /\.js$/, use: "source-map-loader" },
-      { test: /\.css$/, use: ["style-loader", "css-loader"] },
-      { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
+      { enforce: "pre", test: /\.js$/, use: "source-map-loader" }
+      // { test: /\.css$/, use: ["style-loader", "css-loader"] },
+      // { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
     ]
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   mode: "production",
   plugins: [
