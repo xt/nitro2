@@ -13,30 +13,31 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var countryStore =
+var productsStore =
 /*#__PURE__*/
 function () {
-  function countryStore() {
-    _classCallCheck(this, countryStore);
+  function productsStore() {
+    _classCallCheck(this, productsStore);
 
-    this.likedCountries = [];
-    this.currentLikedCountry = {};
+    this.likedItems = [];
+    this.currentLikedItem = {};
   }
 
-  _createClass(countryStore, [{
-    key: "updateHeaderStore",
+  _createClass(productsStore, [{
+    key: "getLikedItems",
     get: function get() {
-      return this.currentLikedCountry;
+      return this.likedItems;
     }
   }]);
 
-  return countryStore;
+  return productsStore;
 }();
 
-(0, _mobx.decorate)(countryStore, {
-  likedCountries: _mobx.observable,
-  updateHeaderStore: _mobx.computed
+(0, _mobx.decorate)(productsStore, {
+  likedItems: _mobx.observable,
+  getLikedItems: _mobx.computed
 });
-countryStore = countryStore || new countryStore();
-var _default = countryStore;
+
+var _default = new productsStore();
+
 exports.default = _default;

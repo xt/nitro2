@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node server/server",
     "install:apps": "lerna bootstrap",
-    "build:apps": "lerna run build",
+    "build:apps": "lerna run --parallel build",
     "start-apps": "lerna run --parallel start",
     "watch-apps": "lerna run --parallel watch",
-    "start:dev": "nodemon server/server"
+    "start:dev": "nodemon server/server",
+    "test": "lerna run test"
   },
   "author": "",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "lerna": "^3.8.0",
     "node-tailor": "^3.9.2",
     "nodemon": "^1.18.9",
+    "plop": "^2.2.0",
     "webpack": "^4.28.2"
   },
   "dependencies": {
