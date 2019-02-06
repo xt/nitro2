@@ -1,30 +1,24 @@
-const templateFiles = "template/**";
+const templateFiles = "plop-template/**";
 
 const defaultActions = [
   {
     type: "addMany",
-    destination: "src/",
-    base: "template",
+    destination: "packages/{{camelCase name}}",
+    base: "plop-template",
     templateFiles
   },
   {
     type: "modify",
-    path: "src/README.md",
-    pattern: /##__PROJECT_NAME_PROPER_CASE__##/gi,
-    template: "{{titleCase name}}"
-  },
-  {
-    type: "modify",
-    path: "src/**",
+    path: "packages/{{camelCase name}}/package.json",
     pattern: /##__PROJECT_NAME_LOWER_CASE__##/gi,
-    template: "{{lowerCase name}}"
+    template: "{{dashCase name}}"
   }
 ];
 
 module.exports = plop => {
   // Declare a new generator called "newApp" for use with our react-redux-boilerplate app
   plop.setGenerator("bloks-core", {
-    description: "Scaffold a new React project",
+    description: "Scaffold a new React microApp",
 
     // Get inputs from the user.
     // That's Inquirer.js doing the job behind the hood.
@@ -32,7 +26,7 @@ module.exports = plop => {
       {
         type: "input",
         name: "name",
-        message: "What is your Project name?",
+        message: "Name from your Micro App?",
         validate: value => {
           if (/.+/.test(value)) {
             if (/^[a-zA-Z]+$/.test(value)) {
@@ -42,46 +36,6 @@ module.exports = plop => {
           }
           return "Name is required!";
         }
-      },
-      {
-        type: "input",
-        name: "prod-url",
-        message: "What will the production url for the site app?",
-        validate: value => {
-          if (/.+/.test(value)) {
-            if (
-              /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(
-                value
-              )
-            ) {
-              return true;
-            }
-            return "Doesn't look like a valid URL.";
-          }
-          return "url is required!";
-        }
-      },
-
-      {
-        type: "confirm",
-        name: "isBertieNeeded",
-        message: "Would you like to add Bertie for Analytics?",
-        default: true
-      },
-
-      {
-        type: "confirm",
-        name: "isDockerNeeded",
-        message: "Would you like to dockerize the app for deployment?",
-        default: true
-      },
-      {
-        when: response => {
-          return response.isDockerNeeded;
-        },
-        type: "input",
-        name: "hosting",
-        message: "Would you be deploying it to AWS or Azure?"
       }
     ],
 
