@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server",
     "install:apps": "lerna bootstrap",
-    "build:apps": "lerna run build",
+    "build:apps": "lerna run --parallel build",
     "start-apps": "lerna run --parallel start",
     "watch-apps": "lerna run --parallel watch",
     "start:dev": "nodemon server/server",
