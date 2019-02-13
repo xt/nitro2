@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server",
     "install:apps": "lerna bootstrap",
-    "build:apps": "lerna run build",
+    "build:apps": "lerna run --parallel build",
     "start-apps": "lerna run --parallel start",
     "watch-apps": "lerna run --parallel watch",
     "start:dev": "nodemon server/server",
@@ -43,6 +43,7 @@
     "lint-staged": "^8.1.3",
     "node-tailor": "^3.9.2",
     "nodemon": "^1.18.9",
+    "plop": "^2.2.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.16.4",
     "tslint": "^5.12.1",
