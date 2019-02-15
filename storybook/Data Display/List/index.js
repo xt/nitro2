@@ -3,11 +3,11 @@ import './style.css';
 
 import SimpleList from './SimpleList';
 import Basic from './Basic';
-import LoadMore from './LoadMore';
+//import LoadMore from './LoadMore';
 import Vertical from './Vertical';
 import Grid from './Grid';
 import Response from './Response';
-import ScrollLoad from './ScrollLoad';
+//import ScrollLoad from './ScrollLoad';
 
 class ListPage extends Component {
   render() { 
@@ -29,11 +29,11 @@ class ListPage extends Component {
 
         <SimpleList />
         <Basic />
-        <LoadMore />
+        {/* <LoadMore /> */}
         <Vertical />
         <Grid />
         <Response />
-        <ScrollLoad />
+        {/* <ScrollLoad /> */}
 
       </Fragment>
     );
