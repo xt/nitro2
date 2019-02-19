@@ -1,0 +1,68 @@
+{
+  "projectName": "nitro2",
+  "projectOwner": "xt",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 150,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "nisheed2440",
+      "name": "Nisheed Jagadish",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3470465?v=4",
+      "profile": "https://github.com/nisheed2440",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "elanandkumar",
+      "name": "Anand Kumar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/45815177?v=4",
+      "profile": "https://github.com/elanandkumar",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sohonisaurabh",
+      "name": "Saurabh Sohoni",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/20185422?v=4",
+      "profile": "https://github.com/sohonisaurabh",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "imranweb",
+      "name": "Mohd Imran",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/142714?v=4",
+      "profile": "http://in.linkedin.com/in/imranweb",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "aditisingh244",
+      "name": "Aditi Singh",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/47027991?v=4",
+      "profile": "https://github.com/aditisingh244",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "areai51",
+      "name": "Vinci Rufus",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/357862?v=4",
+      "profile": "https://github.com/areai51",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

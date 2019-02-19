@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<div
+  className="css-1p8gbkt-Card"
+>
+  <img
+    className="css-q0fy04-Card"
+    src="http://skadl/.png"
+  />
+  <h4
+    className="css-1wg6z3u-Card"
+  >
+    abc
+  </h4>
+  <aside>
+    <ul
+      className="css-11juu7-Card"
+    >
+      <li
+        className="css-1kiw5wj-Card"
+      >
+        Price: Rs 
+        1500
+      </li>
+    </ul>
+    <button
+      className="css-1cpoxhp"
+      onClick={[Function]}
+    >
+      Add to Cart
+       
+    </button>
+  </aside>
+</div>
+`;

@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React from "react";
-import { jsx, css } from "@emotion/core";
+import React from 'react';
+import { jsx, css } from '@emotion/core';
 
-import Card from "../Card";
+import Card from '../Card';
 
-import store from "../store/store";
+import store from '../store/store';
 
-//--------Emotion  Styles -------/
+// --------Emotion  Styles -------/
 
 const headingStyle = css`
   margin: 1rem 0.5rem 0rem 0.5rem;
@@ -17,6 +17,7 @@ const cardList = css`
   flex-flow: row wrap;
 `;
 const CardList = props => {
+  console.log('props.data::', props.data);
   const productList = props.data.allProducts.map((product, index) => (
     <Card key={index} product={product} store={store} />
   ));

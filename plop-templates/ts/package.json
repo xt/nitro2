@@ -1,5 +1,5 @@
 {
-  "name": "products",
+  "name": "##__PROJECT_NAME_LOWER_CASE__##",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,26 +7,27 @@
     "build": "webpack",
     "build-dev": "NODE_ENV=dev webpack",
     "start": "NODE_ENV=dev webpack-dev-server --open",
-    "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel dist -d functions/dist && node_modules/.bin/babel index.js -d functions",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "babel": "node_modules/.bin/babel app -d functions/app && node_modules/.bin/babel index.js -d functions",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "firebase:serve": "firebase serve",
-    "bf": "npm run babel && npm run firebase:serve"
+    "bf": "npm run babel && npm run firebase:serve",
+    "tsc": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.0.5",
+    "@types/node": "^10.12.18",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
     "classnames": "^2.2.6",
     "exenv": "^1.2.2",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
     "mobx": "^5.8.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "zen-observable": "^0.8.11"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -34,43 +35,24 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
+    "@types/exenv": "^1.2.0",
+    "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.1",
-    "enzyme-to-json": "^3.3.5",
     "express": "^4.16.4",
     "firebase-admin": "^6.4.0",
     "firebase-functions": "^2.1.0",
     "firebase-tools": "^6.2.2",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^24.1.0",
     "node-sass": "^4.11.0",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
+    "typescript": "^3.2.2",
     "webpack": "^4.28.3",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./__tests__/setup/setupEnzyme.js"
-    ],
-    "testPathIgnorePatterns": [
-      "./__tests__/setup/"
-    ],
-    "coverageDirectory": "./coverage",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "app/**/*.js",
-      "!**/data/*.js",
-      "!**/vendors/**/*.js"
-    ],
-    "coverageReporters": [
-      "text",
-      "html"
-    ]
   },
   "babel": {
     "plugins": [
