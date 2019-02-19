@@ -32,7 +32,7 @@ const tsTemplateActions = [
 
 module.exports = plop => {
   // Declare a new generator called "newApp" for use with our react-redux-boilerplate app
-  plop.setGenerator('bloks-core', {
+  plop.setGenerator('nitro2', {
     description: 'Scaffold a new React microApp',
 
     // Get inputs from the user.
