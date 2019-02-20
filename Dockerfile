@@ -13,8 +13,12 @@ COPY server ./
 
 RUN npm run install:apps
 RUN npm run build:apps
-
 COPY . .
-# EXPOSE 8080
+
+FROM node:11-alpine as nodeprod
+COPY --from=nodebuild /www/app/ /www/app/
+WORKDIR /www/app
+EXPOSE 3000
+
 
 CMD ["npm","start"]
