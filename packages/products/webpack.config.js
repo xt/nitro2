@@ -1,39 +1,39 @@
-var path = require("path");
-var PACKAGE = require("./package.json");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+var path = require('path');
+var PACKAGE = require('./package.json');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var isProd = process.env.NODE_ENV !== 'dev';
 var externals = {};
-if(isProd) {
+if (isProd) {
   externals = {
-    react: "react",
-    "react-dom": "reactDOM",
-    emotion: "@emotion/core",
-    mobx: "mobx",
-    pubSub: "pubSub"
+    react: 'react',
+    'react-dom': 'reactDOM',
+    emotion: '@emotion/core',
+    mobx: 'mobx',
+    pubSub: 'pubSub',
   };
 }
 
-var outputPathFragment = isProd ? "../../dist" + PACKAGE.name : "dist";
+var outputPathFragment = isProd ? '../../dist/' + PACKAGE.name : 'dist';
 
 module.exports = {
-  entry: "./app/index.js",
+  entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, outputPathFragment),
     filename: `${PACKAGE.name}.app.js`,
-    publicPath:  isProd ? `/${PACKAGE.name}` : ``
+    publicPath: isProd ? `/${PACKAGE.name}` : ``,
   },
   externals: externals,
   module: {
     rules: [
-      { test: /\.(js)$/, use: "babel-loader" },
-      { test: /\.css$/, use: ["style-loader", "css-loader"] },
-      { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader" }
-    ]
+      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+    ],
   },
-  mode: "production",
+  mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
-      template: "app/index.html"
-    })
-  ]
+      template: 'app/index.html',
+    }),
+  ],
 };
