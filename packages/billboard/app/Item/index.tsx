@@ -34,6 +34,7 @@ const colStyle = css`
 
 const imageStyle = css`
   height: 500px;
+  width:542px;
 `;
 
 const buttonStyle = css`

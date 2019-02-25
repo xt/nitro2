@@ -3,4 +3,13 @@ import { hydrate } from "react-dom";
 import ItemList from "./ItemList";
 import mockResponse from "./data/mock-data.js";
 
-hydrate(<ItemList data={mockResponse} />, document.getElementById("billboard"));
+//const mockResponse = React.lazy(() => import('./data/mock-data'));
+const LazyItemList = React.lazy(() =>  import('./ItemList'));
+const App = () => {
+  return (
+    <React.Suspense fallback={<div> loading...</div>}>
+      <LazyItemList data={mockResponse} />
+    </React.Suspense>
+  );
+}
+hydrate(<App />, document.getElementById("billboard"));
