@@ -1,0 +1,12 @@
+node_modules
+**/node_modules/**
+npm-debug.log
+.DS_Store
+.gitignore
+
+Dockerfile
+README.md
+
+bin
+ui/node_modules
+vendor
