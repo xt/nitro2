@@ -1,15 +1,18 @@
-const express = require("express");
-const Tailor = require("node-tailor");
-const { fetchTemplate, filterRequestHeaders } = require("./tailor");
+const express = require('express');
+const Tailor = require('node-tailor');
+const { fetchTemplate, filterRequestHeaders } = require('./tailor');
 
 const tailor = new Tailor({
   fetchTemplate,
-  filterRequestHeaders
+  filterRequestHeaders,
 });
 
 const app = express();
-
-app.use(express.static("dist"));
+app.get('/', function(req, res, next) {
+  req.url = '/index';
+  next();
+});
+app.use(express.static('dist'));
 
 app.use(tailor.requestHandler);
 
