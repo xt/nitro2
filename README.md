@@ -1,6 +1,10 @@
 # nitro2
 
-## steps to run
+## Build using Docker
+` docker build -t xt/nitro2 .`
+` docker run -p 3000:3000 xt/nitro2` 
+
+## steps to Build Locally & run
 
 `npm i`
 
