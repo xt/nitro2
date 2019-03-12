@@ -1,6 +1,8 @@
 const express = require('express');
+const helment = require('helmet');
 const Tailor = require('node-tailor');
-const { fetchTemplate, filterRequestHeaders } = require('./tailor');
+
+const { fetchTemplate, filterRequestHeaders } = require('./middleware/tailor');
 
 const tailor = new Tailor({
   fetchTemplate,
@@ -8,6 +10,7 @@ const tailor = new Tailor({
 });
 
 const app = express();
+app.use(helment());
 app.get('/', function(req, res, next) {
   req.url = '/index';
   next();

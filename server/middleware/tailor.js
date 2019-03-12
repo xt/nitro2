@@ -1,19 +1,19 @@
-const path = require("path");
+const path = require('path');
 
-const fetchTemplateFs = require("node-tailor/lib/fetch-template");
+const fetchTemplateFs = require('node-tailor/lib/fetch-template');
 const ACCEPT_HEADERS = [
-  "accept-language",
-  "referer",
-  "user-agent",
-  "x-request-uri",
-  "x-request-host",
-  "cookie"
+  'accept-language',
+  'referer',
+  'user-agent',
+  'x-request-uri',
+  'x-request-host',
+  'cookie',
 ];
 
 module.exports = {
   fetchTemplate: fetchTemplateFs(
-    path.join(__dirname, "..", "templates"),
-    () => "app-shell"
+    path.join(__dirname, '../..', 'templates'),
+    () => 'app-shell',
   ),
 
   filterRequestHeaders: (attributes, request) => {
@@ -26,5 +26,5 @@ module.exports = {
           headers[key] && (newHeaders[key] = headers[key]);
           return newHeaders;
         }, {});
-  }
+  },
 };
