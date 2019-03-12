@@ -13,7 +13,7 @@
 
     <style>
       body {
-        font-family: "Open Sans Condensed", sans-serif;
+        font-family: 'Open Sans Condensed', sans-serif;
       }
       #chatWindowContainer {
         position: fixed;
@@ -38,7 +38,7 @@
       }
       #chatTriggerIcon .before,
       #chatTriggerIcon .after {
-        content: "";
+        content: '';
         position: absolute;
         width: 20px;
         height: 2px;
@@ -67,12 +67,8 @@
   </head>
 
   <body>
-    <!-- <fragment
-      src="https://us-central1-nitro2.cloudfunctions.net/n2headerSSR/index"
-    ></fragment> -->
-
     <!-- <fragment src="http://localhost:3000/header/index.html"></fragment> -->
-    
+
     <!-- Header SSR with pubsub -->
     <fragment
       src="https://us-central1-nitro2.cloudfunctions.net/n2headerPubSub/index"

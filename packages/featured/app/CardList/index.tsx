@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import * as React from "react";
-import { jsx, css } from "@emotion/core";
-import Card from "../Card";
+import * as React from 'react';
+import { jsx, css } from '@emotion/core';
+import Card from '../Card';
 
 //--------Emotion  Styles -------/
 

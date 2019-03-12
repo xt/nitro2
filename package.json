@@ -32,11 +32,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-
     "@storybook/react": "^4.1.11",
-
     "all-contributors-cli": "^6.1.1",
-
     "babel-eslint": "^8.2.6",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^17.1.0",
