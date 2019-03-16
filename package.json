@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/server",
-    "generate": "plop",
+    "gen": "plop",
     "storybook": "start-storybook -p 9002 -c .storybook",
     "install:apps": "lerna bootstrap",
     "build:apps": "lerna run --parallel build",

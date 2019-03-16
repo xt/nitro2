@@ -14,6 +14,24 @@ const jsTemplateActions = [
     pattern: /##__PROJECT_NAME_LOWER_CASE__##/gi,
     template: '{{dashCase name}}',
   },
+  {
+    type: 'modify',
+    path: 'packages/{{camelCase name}}/app/index.html',
+    pattern: /##__PROJECT_NAME__##/gi,
+    template: '{{dashCase name}}',
+  },
+  {
+    type: 'modify',
+    path: 'packages/{{camelCase name}}/app/index.js',
+    pattern: /##__PROJECT_NAME__##/gi,
+    template: '{{dashCase name}}',
+  },
+  {
+    type: 'modify',
+    path: 'packages/{{camelCase name}}/index.html',
+    pattern: /##__PROJECT_NAME__##/gi,
+    template: '{{dashCase name}}',
+  },
 ];
 const tsTemplateActions = [
   {
