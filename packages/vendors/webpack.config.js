@@ -11,7 +11,25 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
   },
   module: {
-    rules: [{ test: /\.(js)$/, use: 'babel-loader' }],
+    rules: [
+    {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            rootMode: 'upward',
+          },
+        },
+      },
+    ],
   },
   mode: 'production',
+  resolve: {
+    modules: [
+      'node_modules',
+    ],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    symlinks: true,
+  },
 };

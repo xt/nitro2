@@ -4,3 +4,4 @@ window.react = require("react");
 window.reactDOM = require("react-dom");
 window["@emotion/core"] = require("@emotion/core");
 window.mobx = require("mobx");
+//window["@nitro2/shared"] = require("@nitro2/shared");
