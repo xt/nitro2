@@ -25,7 +25,16 @@ module.exports = {
   externals: externals,
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: require.resolve('babel-loader'),
+          options: {
+            rootMode: 'upward',
+          },
+        },
+      },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
     ],
@@ -36,4 +45,11 @@ module.exports = {
       template: 'app/index.html',
     }),
   ],
+  resolve: {
+    modules: [
+      'node_modules',
+    ],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    symlinks: true,
+  },
 };

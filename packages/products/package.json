@@ -18,6 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@nitro2/shared": "^1.0.0",
     "@emotion/core": "^10.0.5",
     "classnames": "^2.2.6",
     "exenv": "^1.2.2",

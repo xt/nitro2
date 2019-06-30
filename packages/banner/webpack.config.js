@@ -21,7 +21,7 @@ module.exports = {
     filename: `${PACKAGE.name}.app.js`,
     publicPath: isProd ? `/${PACKAGE.name}` : ``,
   },
-  devtool: 'source-map',
+  //devtool: 'source-map',
   externals: externals,
   module: {
     rules: [

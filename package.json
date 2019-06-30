@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Microfrontend framework with React",
   "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start": "node server/server",
     "gen": "plop",
+    "clean": "lerna clean --yes && rm -rf ./node_modules",
     "storybook": "start-storybook -p 9002 -c .storybook",
     "install:apps": "lerna bootstrap",
     "build:apps": "lerna run --parallel build",
