@@ -7,13 +7,13 @@
 
 ## steps to Build Locally & run
 
-`npm i`
+`yarn`
 
-`npm run install:apps`
+`yarn install:apps`
 
-`npm run build:apps`
+`yarn build:apps`
 
-`npm run start`
+`yarn start`
 
 on the browser `http://localhost:3000/home`
 
