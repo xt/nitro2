@@ -8,11 +8,13 @@ if (isProd) {
   externals = {
     react: 'react',
     'react-dom': 'reactDOM',
+
     '@emotion/core': 'emotionCore',
     //'@emotion': '@emotion/core',
     mobx: 'mobx',
     //pubSub: 'pubSub',
     '@nitro2/shared': 'nitro2Shared',
+
   };
 }
 var outputPathFragment = isProd ? '../../dist/' + PACKAGE.name : 'dist';
