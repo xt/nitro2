@@ -7,9 +7,10 @@ if (isProd) {
   externals = {
     react: 'react',
     'react-dom': 'reactDOM',
-    emotion: '@emotion/core',
+    '@emotion/core': 'emotionCore',
     mobx: 'mobx',
-    pubSub: 'pubSub',
+    //pubSub: 'pubSub',
+    '@nitro2/shared': 'nitro2Shared',
   };
 }
 
