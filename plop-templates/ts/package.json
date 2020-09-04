@@ -45,7 +45,7 @@
     "firebase-functions": "^2.1.0",
     "firebase-tools": "^6.2.2",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "typescript": "^3.2.2",
