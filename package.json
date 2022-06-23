@@ -73,7 +73,7 @@
     "fs": "0.0.1-security",
     "helmet": "^3.16.0",
     "html-minifier": "^3.5.21",
-    "jsdom": "^13.1.0",
+    "jsdom": "^16.5.0",
     "node-gyp": "^3.8.0",
     "react-dom": "^16.7.0",
     "request-promise": "^4.2.2",
