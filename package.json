@@ -49,7 +49,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "lerna": "^3.13.1",
-    "lint-staged": "^8.1.3",
+    "lint-staged": "^13.1.0",
     "node-tailor": "^3.9.2",
     "nodemon": "^1.18.9",
     "plop": "^2.2.0",
