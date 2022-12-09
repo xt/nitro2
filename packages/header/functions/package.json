@@ -12,7 +12,7 @@
     "@emotion/core": "^10.0.6",
     "classnames": "^2.2.6",
     "exenv": "^1.2.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "firebase-admin": "~6.0.0",
     "firebase-functions": "^2.1.0",
     "isomorphic-fetch": "^2.2.1",
