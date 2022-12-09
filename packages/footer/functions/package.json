@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "exenv": "^1.2.2",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "firebase-admin": "~6.0.0",
     "firebase-functions": "^2.1.0",
     "react": "^16.7.0",
